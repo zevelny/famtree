@@ -24,6 +24,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+.message{
+    color:red;
+}
+
 body {
   line-height: 1;
 }

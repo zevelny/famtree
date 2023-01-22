@@ -19,7 +19,7 @@
             <p><input type="password" name="password" value="" placeholder="Пароль"></p>
             <p><input type="password" name="confirm_password" value="" placeholder="Повторить пароль"></p>
 
-            <p class="submit"><input type="submit" name="commit" value="----"></p>
+            <p class="submit"><input type="submit" name="commit" value="Добавить"></p>
         </form>
     </div>
 </section>

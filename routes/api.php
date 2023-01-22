@@ -25,7 +25,8 @@ Route::prefix('{microserviceName}')->group(function (){
     Route::any('hello','MainController@hello');
 
     Route::prefix('person')->group(function (){
-        Route::any('reg','PersonController@create');
+        Route::any('reg','UserController@create');
+        Route::any('login','UserController@login');
     });
 });
 

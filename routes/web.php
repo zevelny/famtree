@@ -21,9 +21,13 @@ if (App::environment('local')) {
 }
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Route::get('/reg', function () {
     return view('registration');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
 });
