@@ -24,9 +24,13 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('{microserviceName}')->group(function (){
     Route::any('hello','MainController@hello');
 
-    Route::prefix('person')->group(function (){
+    Route::prefix('user')->group(function (){
         Route::any('reg','UserController@create');
         Route::any('login','UserController@login');
+    });
+
+    Route::prefix('person')->group(function (){
+        Route::any('workspace','PersonController@workspace');
     });
 });
 

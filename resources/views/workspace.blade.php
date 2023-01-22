@@ -6,20 +6,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Вход</title>
+    <title>Рабочее пространство</title>
     <link rel="stylesheet" href="public/css/login.css">
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <section class="container">
-    <div class="login">
-        <h1>Вход</h1>
-        <h3 style="color:red;">{{ Request::get('message', "") }}</h3>
-        <form method="post" action="http://turbofamily/api/familytree/user/login">
-            <p><input type="text" name="username" value="" placeholder="Логин или Email"></p>
-            <p><input type="password" name="password" value="" placeholder="Пароль"></p>
+    <div class="workspace">
 
-            <p class="submit"><input type="submit" name="commit" value="Вход"></p>
+        <form method="post" action="http://turbofamily/api/familytree/person/reg">
+            <table>
+                <tr><th>Id дерева</th><th>Просмотр</th></tr> <!--ряд с ячейками заголовков-->
+                <tr><td></td><td></td></tr> <!--ряд с ячейками тела таблицы-->
+
+            </table>
+
         </form>
     </div>
 </section>

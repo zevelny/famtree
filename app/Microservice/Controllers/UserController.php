@@ -35,7 +35,7 @@ class UserController extends \App\Http\Controllers\Controller
         $user = User::query()->where('username', $username)->where('password', $password)->first();
 
         if(!empty($user))
-            return redirect('/welcome?session_id='.urlencode(Crypt::encryptString($user->id)));
+            return redirect('/workspace?session_id='.urlencode(Crypt::encryptString($user->id)));
 
         $message = "Неправильный логин или пароль";
 
