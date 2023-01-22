@@ -23,6 +23,10 @@ use Illuminate\Support\Facades\Route;
  */
 Route::prefix('{microserviceName}')->group(function (){
     Route::any('hello','MainController@hello');
+
+    Route::prefix('person')->group(function (){
+        Route::any('reg','PersonController@create');
+    });
 });
 
 
