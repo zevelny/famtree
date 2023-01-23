@@ -53,8 +53,8 @@ table {
 
 body {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  color: #404040;
-  background: #0ca3d2;
+  color: white;
+  background: white;
 }
 
 .container {
@@ -80,7 +80,7 @@ body {
   bottom: -8px;
   left: -8px;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.08);
+  background: white;
   border-radius: 4px;
 }
 .login h1 {

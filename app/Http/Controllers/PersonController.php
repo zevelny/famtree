@@ -20,11 +20,6 @@ class PersonController extends \App\Http\Controllers\Controller
         $people = Person::query()->where('user_id', $userId)->get();
         $trees = $people->unique('tree_id');
 
-        return view('workspace', ['trees' => $trees]);
-    }
-
-    public function Create(Request $request)
-    {
-
+        return view('workspace', ['trees' => $trees, 'userId' => $userId]);
     }
 }

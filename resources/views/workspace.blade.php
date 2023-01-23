@@ -20,10 +20,11 @@
     <div class="workspace">
         <h1>Ваши деревья</h1>
 
-        <form method="post" action="create">
+        <form method="get" action="http://turbofamily/new_tree">
+            <input hidden type="text" name="userId" value="{{$userId}}">
             <button type="submit">Добавить дерево</button>
-
         </form>
+
         <br>
         <table style="text-align: center; width: 100%;">
             <tr>
@@ -42,7 +43,7 @@
                             <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
                             <button type="submit">Редактировать</button>
                         </form>
-                        <form method="post" action="del">
+                        <form method="post" action="http://turbofamily/new_tree">
                             <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
                             <button type="submit">Удалить</button>
                         </form>
