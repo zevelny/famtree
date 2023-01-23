@@ -65,4 +65,11 @@ class TreeController extends \App\Http\Controllers\Controller
 
         return redirect('/new_tree?'.http_build_query($parameters));
     }
+
+    public function Delete(Request $request)
+    {
+        Person::query()->where('tree_id', $request->get('tree_id'))->delete();
+
+        return redirect('workspace');
+    }
 }

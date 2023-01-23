@@ -23,5 +23,6 @@ Route::get('/welcome', function () {
 
 Route::any('new_tree','TreeController@index');
 Route::any('create_tree','TreeController@create');
+Route::any('del_tree','TreeController@delete');
 Route::any('workspace','PersonController@workspace');
 

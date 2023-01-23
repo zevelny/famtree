@@ -43,7 +43,7 @@
                             <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
                             <button type="submit">Редактировать</button>
                         </form>
-                        <form method="post" action="http://turbofamily/new_tree">
+                        <form method="get" action="http://turbofamily/del_tree">
                             <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
                             <button type="submit">Удалить</button>
                         </form>
