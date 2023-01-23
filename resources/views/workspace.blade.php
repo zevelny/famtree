@@ -7,21 +7,49 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Рабочее пространство</title>
-    <link rel="stylesheet" href="public/css/login.css">
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+
+</style>
 <body>
 <section class="container">
     <div class="workspace">
+        <h1>Ваши деревья</h1>
 
-        <form method="post" action="http://turbofamily/api/familytree/person/reg">
-            <table>
-                <tr><th>Id дерева</th><th>Просмотр</th></tr> <!--ряд с ячейками заголовков-->
-                <tr><td></td><td></td></tr> <!--ряд с ячейками тела таблицы-->
-
-            </table>
+        <form method="post" action="create">
+            <button type="submit">Добавить дерево</button>
 
         </form>
+        <br>
+        <table style="text-align: center; width: 100%;">
+            <tr>
+                <th style="width: 70%;">Дерево</th>
+                <th>Просмотр</th>
+            </tr>
+            @foreach($trees as $tree)
+                <tr>
+                    <td>{{$tree->tree_id}}</td>
+                    <td>
+                        <form method="post" action="view">
+                            <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
+                            <button type="submit">Просмотреть</button>
+                        </form>
+                        <form method="post" action="red">
+                            <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
+                            <button type="submit">Редактировать</button>
+                        </form>
+                        <form method="post" action="del">
+                            <input type="hidden" name="tree_id" value="{{$tree->tree_id}}">
+                            <button type="submit">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
     </div>
 </section>
 </body>

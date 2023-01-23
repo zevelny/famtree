@@ -32,8 +32,4 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-//Route::get('/workspace', function () {
-//    return view('workspace');
-//});
-
 Route::any('workspace','PersonController@workspace');
