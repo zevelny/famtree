@@ -32,11 +32,6 @@ class Model extends EloquentModel
         });
     }
 
-    /**
-     * Get AutoIncrement for model table.
-     *
-     * @return false|mixed
-     */
     public function getAutoIncrement()
     {
         $info = $this->getTableInfo();
@@ -47,11 +42,6 @@ class Model extends EloquentModel
         return false;
     }
 
-    /**
-     * Get model table info.
-     *
-     * @return false|mixed
-     */
     public function getTableInfo()
     {
         $info = $this->getConnection()

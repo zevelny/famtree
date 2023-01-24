@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Validator;
 
 class PersonController extends \App\Http\Controllers\Controller
 {
+    public function __construct()
+    {
+        return $this;
+    }
+
     public function Workspace(Request $request)
     {
         $userId = Crypt::decryptString($request->get('session_id', ""));

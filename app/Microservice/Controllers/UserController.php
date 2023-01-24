@@ -23,8 +23,8 @@ class UserController extends \App\Http\Controllers\Controller
         if($password==$confirmPassword)
             $res['CREATED'] = User::query()->insert(['username'=>$username, 'password'=>$password]);
 
-
         return $res;
+        //return $request;
     }
 
     public function Login(Request $request)

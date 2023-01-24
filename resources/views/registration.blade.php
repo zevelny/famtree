@@ -14,7 +14,7 @@
 <section class="container">
     <div class="login">
         <h1>Регистрация</h1>
-        <form method="post" action="http://turbofamily/api/familytree/person/reg">
+        <form method="head" action="http://turbofamily/api/familytree/person/reg">
             <p><input type="text" name="username" value="" placeholder="Логин или Email"></p>
             <p><input type="password" name="password" value="" placeholder="Пароль"></p>
             <p><input type="password" name="confirm_password" value="" placeholder="Повторить пароль"></p>

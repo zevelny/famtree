@@ -23,8 +23,6 @@ class TreeController extends \App\Http\Controllers\Controller
 
         $parameters['people'] = $family;
 
-
-
         return view('new_tree', $parameters);
     }
 
